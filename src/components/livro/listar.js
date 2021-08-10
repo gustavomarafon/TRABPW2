@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 const Lista = ({listaObjetos}) => {
   return (
@@ -7,9 +6,9 @@ const Lista = ({listaObjetos}) => {
       <h1>Meus Livros</h1>
     
 
-      { listaObjetos.length === 0 && <h1>SEM REGISTROS</h1> }
+      { listaObjetos && <h1>SEM REGISTROS</h1> }
 
-      { listaObjetos.length > 0 && (
+      { listaObjetos && (
         <table className="lista">
           <thead>
             <tr>

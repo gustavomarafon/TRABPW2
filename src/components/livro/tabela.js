@@ -9,9 +9,9 @@ const Tabela = ({ listaObjetos, remover }) => {
         Novo <i className="bi bi-file-earmark-plus"></i>
       </Link>
 
-      { listaObjetos.length === 0 && <h1>SEM REGISTROS</h1> }
+      { listaObjetos && <h1>SEM REGISTROS</h1> }
 
-      { listaObjetos.length > 0 && (
+      { listaObjetos && (
         <table className="table">
           <thead>
             <tr>

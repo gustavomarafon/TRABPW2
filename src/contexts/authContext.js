@@ -8,8 +8,8 @@ export const AuthProvider = ({ children }) => {
   const [codigo, setCodigo, removeCodigo] = useLocalStorage('@app: codigo')
 
   useEffect(() => {
-    if (!listaObjetos) setListaObjetos([])
-    if (!codigo) setCodigo(0)
+    if (!listaObjetos && listaObjetos!=[]) setListaObjetos([])
+    if (!codigo && codigo!=0) setCodigo(0)
   }, [listaObjetos, codigo])
 
   return (
